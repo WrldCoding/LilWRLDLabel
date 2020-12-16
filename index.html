@@ -24,6 +24,19 @@ Your browser does not support the audio element.
 </audio>
 
 
+<h3> VERIFICATION <h3>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+ <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+ <button class="g-recaptcha" 
+        data-sitekey="6Lcb7dwZAAAAAN2rDGojPq4xAEXsz_N7BrhAQZE1" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+
+
 
   <a href="https:/lilwrldlabel.tk/faq.txt">FAQ</a>
 
