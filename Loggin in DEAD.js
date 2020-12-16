@@ -1,0 +1,1 @@
+document.cookie = ("LABELACCID = DeadVFX LABELPASSID111 = lilwrldlabel2020@!");

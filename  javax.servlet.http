@@ -1,0 +1,6 @@
+Cookie uiColorCookie = new Cookie("color", "red");
+response.addCookie(uiColorCookie);
+
+
+Cookie uiColorCookie = new Cookie("color", "red");
+response.addCookie(uiColorCookie);
