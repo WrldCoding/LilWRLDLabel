@@ -13,11 +13,6 @@ document.cookie = "google.com/=GCIDAdYnngWd4w6DC3b7bisUIRXHXvT1D0UuZf8ETpZlvprId
 
 var x = document.cookie;
 
-Cookie uiColorCookie = new Cookie("color", "red");
-response.addCookie(uiColorCookie);
-
-
-uiColorCookie.setDomain("google.com");
 
 
 
@@ -34,3 +29,29 @@ uiColorCookie.setDomain("google.com");
         data-sitekey="reCAPTCHA_site_key" 
         data-callback='onSubmit' 
         data-action='submit'>Submit</button>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+
+
+function showCustomer(str) {
+  var xhttp;
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.php?q="+str, true);
+  xhttp.send();
+}
