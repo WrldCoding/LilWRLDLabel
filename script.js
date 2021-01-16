@@ -55,3 +55,22 @@ function showCustomer(str) {
   xhttp.open("GET", "getcustomer.php?q="+str, true);
   xhttp.send();
 }
+
+
+
+
+
+<script>
+var language; 
+function getLanguage() {
+(localStorage.getItem('language') == null) ? setLanguage('en') : false;
+$.ajax({ 
+url:  '/language/' +  localStorage.getItem('language') + '.json', 
+dataType: 'json', async: false, dataType: 'json', 
+success: function (lang) { language = lang } });
+}
+
+function setLanguage(lang) {
+localStorage.setItem('language', lang);
+}
+</script>

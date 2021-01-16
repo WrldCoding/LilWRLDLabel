@@ -56,6 +56,35 @@
 
 
 
+<script>
+var language; 
+function getLanguage() {
+(localStorage.getItem('language') == null) ? setLanguage('en') : false;
+$.ajax({ 
+url:  '/language/' +  localStorage.getItem('language') + '.json', 
+dataType: 'json', async: false, dataType: 'json', 
+success: function (lang) { language = lang } });
+}
+
+function setLanguage(lang) {
+localStorage.setItem('language', lang);
+}
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+    $('#div1').text(language.date);
+    });
+
+    </script>
+
+
+
+
+
 	<input type="image" src="main.png" alt="">
     <title>Lil WRLD</title>
 <header>    <h2>Welcome To The Homepage Of The Lil WRLD Records Inc!</h2><header> Make Sure To Subscribe To Lil WRLD<header>
@@ -64,11 +93,14 @@
 <button class="btn" data-toggle="collapse" data-target="#demo">Channelog</button>
 
 <div id="demo" class="collapse">
-3.5 - Added Channelog And Bug Fixes 
-3.4 - Added Beta Testing And Developer Bug Fixes Flat UI Removed Verification Reverted Back To iframe With Google Forms
+<header>3.7 - Added Multiple Language Support But Only Limited Access Bug Fixes And More...<header>
+<header>3.6 - Security Update Added Security To Help The Website From Hackers Code Scanners Code Alerts And More...<header>
 </div>
 
-  <header>    <span class="badge badge-primary">Version 3.5</span> <header> 
+  <header>    <span class="badge badge-primary">Version 3.7</span> <header> 
+
+
+<header>  <header>    <span class="badge badge-primary">Language: English  Full Access(Support)</span> <header> 
 
 
 
